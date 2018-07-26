@@ -1,3 +1,3 @@
 export default {
-    url: "https://git.heroku.com/instagram-backend-devf.git"
+    url: "https://instagram-backend.herokuapp.com/"
 }
