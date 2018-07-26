@@ -1,0 +1,20 @@
+.my-container-fluid {
+    width: 100%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Instagram-logged-header {
+    background: white;
+    height: 50px;
+    width: 100%;
+    color: black;
+}
+
+.Instagram-header {
+    background: linear-gradient(to right, #bd3381, #d92d77, #ee583f);
+    height: 50px;
+    width: 100%;
+    color: white;
+}

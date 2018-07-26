@@ -68,13 +68,17 @@ class Signup extends Component {
                                             </div>
                                             <div className="col-xs-6 col-sm-6 col-md-6">
                                                 <div className="form-group">
-                                                    <input type="text" name="last_name" id="name" className="form-control input-sm" placeholder="Last Name" value={this.state.last_name} onChange={this.checkOnInput} />
+                                                    <input type="text" name="last_name" id="last_name" className="form-control input-sm" placeholder="Last Name" value={this.state.last_name} onChange={this.checkOnInput} />
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="form-group">
                                             <input type="email" name="email" id="email" className="form-control input-sm" placeholder="Email Address" value={this.state.email} onChange={this.checkOnInput} />
+                                        </div>
+
+                                        <div className="form-group">
+                                            <input type="text" name="user_name" id="user_name" className="form-control input-sm" placeholder="Username" value={this.state.user_name} onChange={this.checkOnInput} />
                                         </div>
 
                                         <div className="row">

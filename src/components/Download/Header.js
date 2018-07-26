@@ -13,7 +13,7 @@ class Header extends Component {
             <header className="Instagram-header">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-m6">
+                        <div className="col">
                             Instagram
                         </div>
                         <div className="col">
