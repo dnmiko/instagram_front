@@ -10,19 +10,13 @@ export default () => {
         data: {
             query: `
                 query{
-                    allPhotos{
-                        _id,
+                    feed{
                         owner{
-                            _id,
                             user_name,
-                            name,
-                            profile_picture,
-                            is_active
-                        }
+                        },
                         description,
                         location,
-                        url,
-                        is_active
+                        url
                     }
                 }
             `

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import allPhotosFromThisOne from '../../services/allPhotosFromThisOne';
+import PhotoCard from '../PhotoCard/PhotoCard';
 
 class Feed extends Component {
     constructor() {
@@ -14,7 +15,7 @@ class Feed extends Component {
         allPhotosFromThisOne().then((resp) => {
             console.log(resp.data)
             this.setState(
-                { photos: resp.data.data.allPhotosFromThisOne }
+                { photos: resp.data.data.feed }
             )
         }).catch((err) => {
             console.log(err)
@@ -28,13 +29,9 @@ class Feed extends Component {
     renderPhotos = () => {
         console.log(this.state)
         if (this.state.photos !== "") {
-            let photos = this.state.photos.map((movie, index) => {
+            let photos = this.state.photos.map((photo, index) => {
                 return (
-                    <div></div>
-                    /* TODO AGREGAR PhotoCard
                     <PhotoCard photo={photo} redirect={this.redirect} />
-                    */
-
                 )
             })
             return photos
@@ -53,11 +50,12 @@ class Feed extends Component {
                     <div className="row">
                         <div className="col">
                             Instagram
+                        </div>
                     </div>
-                        <div className="col">
-                            Estás logeado
-                    </div>
-                    </div>
+                    Estás logeado
+                </div>
+                <div className="container-fluid">
+                    {this.renderPhotos()}
                 </div>
             </header>
         )
