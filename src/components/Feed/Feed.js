@@ -4,8 +4,8 @@ import allPhotosFromThisOne from '../../services/allPhotosFromThisOne';
 import PhotoCard from '../PhotoCard/PhotoCard';
 
 class Feed extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             photos: ""
         }
@@ -23,7 +23,7 @@ class Feed extends Component {
     }
 
     redirect = (id) => {
-        this.props.history.push(`/movie/${id}`);
+        this.props.props.history.push(`/photo/${id}`);
     }
 
     renderPhotos = () => {

@@ -5,6 +5,7 @@ import checkToken from './resolvers/checkToken';
 import Home from './components/Home/Home';
 import Signup from './components/Signup/Signup';
 import Logout from './components/Logout/Logout';
+import Photo from './components/IndividualPhoto/IndividualPhoto';
 
 class Routes extends Component {
     render() {
@@ -21,6 +22,7 @@ class Routes extends Component {
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/signup" component={Signup} />
                     <PrivateRoute exact path='/logout' component={Logout} />
+                    <PrivateRoute path="/photo/:id" component={Photo} />
                 </main>
             </Router>
         )

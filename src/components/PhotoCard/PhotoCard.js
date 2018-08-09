@@ -19,12 +19,18 @@ class PhotoCard extends Component {
 
     render() {
         return (
-            <div className="card" style={{ width: "50%" }}>
-                <img src={this.state.photo.url} width="50%" height="50%" />
-                <h5 className="card-title" onClick={() => this.props.redirect(this.state.photo._id)}>{this.state.photo.description}</h5>
-                <div className="card-body">
-                    <p className="card-text">{this.state.photo.user_name}</p>
+            <div className="row my-row">
+                <div className="col-md-3"></div>
+                <div className="col-md-6 col-sm-12">
+                    <div className="card" style={{ width: "100%" }}>
+                        <h5 className="card-title text-left user_name_text">{this.state.photo.owner.user_name}</h5>
+                        <p className="text-left">{this.state.photo.location}</p>
+                        <img className="card-img-top" src={this.state.photo.url} alt="Card image cap" />
+                        <h5 className="my-card-text" onClick={() => this.props.redirect(this.state.photo._id)}>{this.state.photo.description}</h5>
+                    </div>
+                    <div className="col-md-3"></div>
                 </div>
+
             </div>
         )
     }

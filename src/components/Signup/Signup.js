@@ -50,12 +50,12 @@ class Signup extends Component {
         return (
             <div>
                 <Header />
-                <div className="container">
+                <div className="container topped">
                     <div className="row justify-content-center centered-form ">
                         <div className="col-xs-12 col-sm-8 col-md-10 col-sm-offset-2 col-md-offset-4">
                             <div className="panel panel-default container">
                                 <div className="panel-heading">
-                                    <h3 className="panel-title">Please sign up for Bootsnipp <small>It's free!</small></h3>
+                                    <h3 className="panel-title">Please sign up for Instagram <small>It's free!</small></h3>
                                 </div>
                                 <div className="panel-body">
                                     <form role="form" onSubmit={this.onFormSubmit}>

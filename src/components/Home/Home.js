@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Header from '../Download/Header';
-import { Link } from 'react-router-dom';
 import payload from '../../resolvers/payload';
 import checkToken from '../../resolvers/checkToken';
 import Feed from '../Feed/Feed';
+import Login from '../Login/Login';
 
 class Home extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     chargeProfile = () => {
@@ -16,7 +16,7 @@ class Home extends Component {
             let pl = payload(token);
             return (
                 <div className="my-container-fluid">
-                    <Feed />
+                    <Feed props={this.props} />
                 </div>
             )
         } else {
@@ -27,8 +27,14 @@ class Home extends Component {
                             <Header />
                         </div>
                     </div>
-                    Este es el Home cuando no te has loggeado
-                </div>
+                    <div className="row">
+                        <div className="col-md-3">
+                        </div>
+                        <Login props={this.props} />
+                        <div className="col-md-3"></div>
+                    </div>
+
+                </div >
             )
         }
     }
